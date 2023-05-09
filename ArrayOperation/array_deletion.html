@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array_deletion</title>
+</head>
+<body>
+    <h1>Array Deletion</h1>
+    <input type="text" id="position" placeholder="Enter Position">
+    <button onclick="removeEl()">Remove Element</button>
+        <script>
+        //I want to remove 9 (position 2) from array
+        let data=[4,8,9,7,5,3]
+        let position=2;
+
+        // console.log(data)
+        // data[2]=0 ;//null using this not posible to delete array element
+        // console.log(data)//[4, 8, 0, 7, 5, 3]
+        // for(let i=0;i<data.length;i++){
+        //     console.log(data[i])/print all value
+        // }
+        //but i have to shift element from index 3 to last so print all remainning value except from index 0,1
+       for(let i=position;i<data.length-1;i++){
+        data[i]=data[i+1]
+       }
+       //console.log(data)//[4, 8, 7, 5, 3, undefined]//data.length
+       //[4, 8, 7, 5, 3, 3] data.length-1
+       //remove copied value have to fix data length
+       data.length = data.length-1;
+       //console.log(data)//[4, 8, 7, 5, 3]
+
+      //using input type
+
+       function removeEl(){
+        let data1=[4,8,9,7,5,3]
+        let position1=document.getElementById('position').value
+        position1=parseInt(position1)
+        for(let i=position1;i<data1.length-1;i++){
+            data1[i] =data1[i+1];
+       }
+       data1.length=data1.length-1;
+       console.log(data)//[4, 8, 7, 5, 3]
+         //bydefault delete
+        //  data1.splice(2,1)
+        //  console.log(data1)
+    }
+   
+
+    </script>
+</body>
+</html>

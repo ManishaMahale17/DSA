@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Insertion</title>
+</head>
+<body>
+    <script>
+        let data=[20,40,1,3,4,5]
+        let newEl=30;
+        let position=3;
+        // for(let i=data.length;i>=0;i--){
+        //     console.log(data[i])//undefined 5 4 3 1 40 20
+        // }
+        //print array in reverse order but we got undefined at 1st position so we write 
+        for(let i=data.length-1;i>=0;i--){
+            // console.log(data[i])//5 4 3 1 40 20
+            if(i>=position){
+                data[i+1]=data[i];
+                if(i==position){
+                    data[i]=newEl;
+                }     
+            }  
+        }
+//DEfault method to insert arrray in js is Splice method:
+        console.log(data)
+    </script>
+</body>
+</html>

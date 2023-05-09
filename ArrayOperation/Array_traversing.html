@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array Operation</title>
+</head>
+<body>
+    <input type="text" id="element">
+    <button onclick="getElemnt()">Get Element</button>
+    <script>
+        let data = [1,3,5,6,9,8,19,34,2,44,56,90];
+// 1.Array Traversal
+        // for(let i=0; i<data.length; i++){
+        //     document.write(`Array ${i} is ${data[i]} <br>`);
+        // }
+        
+ //2.array accessing
+        // document.write(data[2])//5
+
+
+//3.Access elemnt using text input  and button
+        // function getElemnt(){
+        //     let element=document.getElementById('element').value;
+        //     // alert(element)
+        //     alert(data[element])//if enter 2(position) we get 5 (value)
+        // }
+//validation
+function getElemnt(){
+    let element=document.getElementById('element').value;
+    if(element<data.length){
+        
+        alert(data[element])
+    }
+    else
+    {
+        alert("Please enter a valid  input element")
+    }
+}
+
+    </script>
+</body>
+</html>

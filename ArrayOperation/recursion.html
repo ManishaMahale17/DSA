@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+    //   function love(v){
+    //     console.log(v);
+    //     //love()// without condition when we call function here it goes to infinite loop
+    //     if(v<10){
+    //         love(v+1)//0 to 10 prints here.
+    //     }
+    //   } 
+    //   let v=0;
+    //   love(v) ;
+
+    //get factiral 5
+    let data=5;
+    function factiral(item){
+        if(item== 0){
+            return 1;
+        }
+        return item*factiral(item-1);
+
+    }
+    console.log(factiral(data)) ;
+   
+    </script>
+</body>
+</html>

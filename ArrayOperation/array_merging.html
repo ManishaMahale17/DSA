@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Array-Merging</title>
+</head>
+<body>
+    <script>
+        //Method1:for loop
+       let data1=[3,7,12,1,56,90]
+       let data2=[20,30,40,50] 
+       let data3=[];
+       for(i=0;i<data1.length;i++){
+        data3[i]=data1[i];//data1 values copied in data3
+       }
+       for(i=0;i<data2.length;i++){
+        data3[data1.length+i]=data2[i];
+        //we want next values so +1 copied to data2.
+       }
+       console.log(data3)//[3, 7, 12, 1, 56, 90, 20, 30, 40, 50]
+      //defalut method for merging
+      let data4=[...data1,...data2]
+      console.log(data4)//[3, 7, 12, 1, 56, 90, 20, 30, 40, 50]
+    
+      //method2:using while loop
+      let arr1=[3,7,12,56,90]
+       let arr2=[2,20,30,40,50] 
+       let arr3=[];
+       let i1=0;
+       let i2=0;
+       let i3=0;
+       while(i1<arr1.length && i2<arr2.length){
+        if(arr1[i1]<arr2[i2]){
+            arr3[i3]=arr1[i1];
+            //i3++;
+            i1++;
+        }
+        else{
+            arr3[i3]=arr2[i2];
+            //i3++;
+            i2++;
+        }
+        i3++;
+       }
+       while(i1 < arr1.length){
+        arr3[i3]=arr1[i1];
+        i1++;
+        i3++;
+       }
+   console.log(arr3);//[2, 3, 7, 12, 20, 30, 40, 50]
+
+    </script>
+</body>
+</html>

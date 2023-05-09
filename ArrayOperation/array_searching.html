@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Searching-Element</title>
+</head>
+<body>
+    <input type="text" id="searchEl" placeholder="Search values...">
+    <button onclick="searchEl()">Search Element</button>
+    <script>
+      //linear search//search element wise if value get loop breaks.
+    //  let array=[23,5,8,6,90,40,28]
+    //  let searchItem=90;
+    //  let index=undefined;
+    //  for(let i=0; i<=array.length-1; i++){
+    //     if(array[i]===searchItem){
+    //         index=i;
+    //         break;
+    //     }
+    //  }
+    // console.log(index);//4
+     //default search
+    //  console.log(array.indexOf(searchItem));//4
+
+    function searchEl(){
+     let array=[23,5,8,6,90,40,28]
+     let searchItem=document.getElementById("searchEl").value;
+     let index=undefined;
+     for(i=0; i<=array.length-1; i++){
+        if(array[i]===parseInt(searchItem)){
+            index=i;
+            break;
+        }
+     }
+    console.log(index);//4
+
+    }
+    </script>
+</body>
+</html>
