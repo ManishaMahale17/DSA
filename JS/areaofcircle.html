@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+  </head>
+  <body>
+    <script>
+      //1.Write a function to find the area  of a Circle
+      console.log("1.--------------------------------");
+      function areaCircles(radius) {
+        return Math.PI * radius * radius;
+      }
+
+      console.log(areaCircles(2));
+      console.log("2.--------------------------------");
+
+      //2. Write a function to reverse a number
+
+      function revNumber(num) {
+        var reverse = 0;
+        while (num != 0) {
+          reverse *= 10;
+          reverse += num % 10;
+          num = Math.trunc(num / 10);
+        }
+        return reverse;
+      }
+      console.log(revNumber(768)); //867
+      console.log("3.--------------------------------");
+
+      //3.Count number of Vowels in String
+
+      function countVowels(str) {
+        var count = 0;
+        str = str.toLowerCase();
+        for (var i = 0; i < str.length; i++) {
+          if (
+            str.charAt(i) == "a" ||
+            str.charAt(i) == "e" ||
+            str.charAt(i) == "i" ||
+            str.charAt(i) == "o" ||
+            str.charAt(i) == "u"
+          ) {
+            count++;
+          }
+        }
+        return count;
+      }
+      console.log(countVowels("Manisha")); //3
+      console.log("4.--------------------------------");
+
+      //4. Flatten array of arrays using JavaScript reduce//combining each sub array
+      function flattenArr(arr) {
+        return arr.reduce((result, array) => result.concat(array));
+      }
+
+      console.log(
+        flattenArr([
+          [1, 2, 3],
+          [4, 5, 6],
+          [7, 8, 9],
+        ])
+      ); //[1, 2, 3, 4, 5, 6, 7, 8, 9]
+      console.log("5.--------------------------------");
+      //5 Write a function to check if an input string is a palindrome
+      function findPalindrome(str) {
+        for (var i = 0; i < str.length; i++) {
+          if (str.charAt(i) != str.charAt(str.length - i - 1)) {
+            // Comparison fail
+            return false;
+          }
+        }
+        return true;
+      }
+
+      console.log(findPalindrome("bannana")); //false
+      console.log(findPalindrome("racecar")); //true
+      console.log(findPalindrome("madam")); //true
+      console.log("6.--------------------------------");
+
+      //6.Write a function to calculate simple interest based on the principle amount
+      function simpleInt(principle, rate, time) {
+        var total;
+        return (total = principle + principle * time * rate);
+      }
+      console.log(simpleInt(20000, 5, 2));
+      console.log("7.--------------------------------");
+
+      //7.Write a function to calculate compound interest based on the principle amount
+      function compoundInt(principle, rate, time, n) {
+        var interest = principle * Math.pow(1 + rate / n, n * time);
+        return principle + interest;
+      }
+      console.log(compoundInt(20000, 5, 2, 2));
+      console.log("8.--------------------------------");
+
+      //8.Write a function to generate a random number
+      function genRandom(start, end) {
+        return Math.floor(Math.random() * end) + start;
+      }
+      console.log(genRandom(1, 10));
+      console.log("9.--------------------------------");
+
+      //9.Write a function to find Factorial of a number
+      function getFactorial(num) {
+        if (num == 1) {
+          return 1;
+        }
+        if (num == 0 || num < 0) {
+          return 0;
+        }
+        return num * getFactorial(num - 1);
+      }
+      console.log(getFactorial(5));
+      console.log("10.--------------------------------");
+
+      //10.Write a function to add unlimited numbers
+      function addNumber(...args) {
+        return args.reduce((total, num) => total + num); //Add numbers
+      }
+      console.log(addNumber(2, 4, 5));
+
+      console.log("11.--------------------------------");
+      //11.Write a function to find the count of a letter in a string
+      function letterCount(str,c) {
+       var count=0;
+       str=str.toLowerCase();
+       for(let i=0;i<str.length;i++) {
+        if(str.charAt(i)==c){
+            count++;
+        }
+       }
+       return count;
+      }
+      console.log(letterCount("Connect",'c')) 
+      console.log(letterCount("first person",'t'))
+    </script>
+  </body>
+</html>
